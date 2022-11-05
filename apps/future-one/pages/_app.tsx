@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app';
 
-import { Layout } from '@future-one/components';
+import { Layout } from '../components';
 
 import '../styles/globals.scss';
 

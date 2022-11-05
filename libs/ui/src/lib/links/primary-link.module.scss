@@ -1,0 +1,23 @@
+.wrapper {
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: var(--transition-color);
+  border-bottom: 1px solid transparent;
+
+  &[data-variant='light'] {
+    color: var(--color-white);
+
+    &:hover {
+      border-color: var(--color-white);
+    }
+  }
+
+  &[data-variant='dark'] {
+    color: var(--color-black);
+
+    &:hover {
+      border-color: var(--color-black);
+    }
+  }
+}

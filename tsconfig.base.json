@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@future-one/components": ["apps/future-one/components"],
       "@future-one/ui": ["libs/ui/src/index.ts"]
     }
   },

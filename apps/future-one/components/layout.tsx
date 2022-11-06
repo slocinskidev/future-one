@@ -1,5 +1,6 @@
-import React from 'react';
+import { ReactNode } from 'react';
 
+import { Footer } from './footer';
 import { Header } from './header';
 
 const header = {
@@ -18,11 +19,12 @@ const header = {
   },
 };
 
-export const Layout = ({ children }: { children: React.ReactNode }) => {
+export const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Header {...header} />
       <main>{children}</main>
+      <Footer />
     </>
   );
 };

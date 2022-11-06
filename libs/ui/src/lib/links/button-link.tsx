@@ -9,6 +9,11 @@ type ButtonLinkProps = {
   variant?: 'contained' | 'outline';
 };
 
+export type ButtonLinkType = {
+  label: string;
+  href: string;
+} & ButtonLinkProps;
+
 export const ButtonLink = React.forwardRef<
   HTMLAnchorElement,
   UnstyledLinkProps & ButtonLinkProps

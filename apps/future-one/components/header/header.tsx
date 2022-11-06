@@ -1,18 +1,51 @@
-import { ButtonLink, PrimaryLink } from '@future-one/ui';
+import { ButtonLink, ButtonLinkType } from '@future-one/ui';
+import { useEffect } from 'react';
+
+import { useToggle } from '../../hooks';
+
+import {
+  Hamburger,
+  NavigationItemType,
+  NavigationMobile,
+  NavigationDesktop,
+} from '../index';
 
 import styles from './header.module.scss';
 
-/* eslint-disable-next-line */
-export interface HeaderProps {}
+export interface HeaderProps {
+  navigation: NavigationItemType[];
+  contactButton: ButtonLinkType;
+}
 
-export const Header = (props: HeaderProps) => {
+export const Header = ({ navigation, contactButton }: HeaderProps) => {
+  const [isOpen, toggleIsOpen] = useToggle();
+
+  useEffect(() => {
+    document.body.style.overflowY =
+      document.body.style.overflowY === 'hidden' ? 'visible' : 'hidden';
+  }, [isOpen]);
+
   return (
     <header className={styles['container']}>
-      <h1>Welcome to Header!</h1>
-      <ButtonLink href="/" variant="outline">
-        Button outline
+      <NavigationDesktop
+        {...{ navigation, className: styles['nav-desktop'] }}
+      />
+      <NavigationMobile
+        {...{
+          navigation,
+          isOpen,
+          toggleIsOpen,
+          className: styles['nav-mobile'],
+        }}
+      />
+      <Hamburger
+        {...{ isOpen, toggleIsOpen, className: styles['hamburger'] }}
+      />
+      <ButtonLink
+        {...{ href: contactButton.href, className: styles['contact-btn'] }}
+      >
+        {contactButton.label}
       </ButtonLink>
-      <PrimaryLink href="/">Primary link</PrimaryLink>
     </header>
   );
 };

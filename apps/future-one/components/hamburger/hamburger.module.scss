@@ -1,0 +1,67 @@
+@use '../../styles/breakpoints';
+
+.wrapper {
+  padding: 14px;
+  display: flex;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  z-index: 10;
+
+  @include breakpoints.desktop {
+    display: none;
+  }
+}
+
+.box {
+  width: 32px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.inner {
+  display: block;
+  top: 50%;
+  background-color: var(--color-black);
+
+  &,
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-black);
+    border-radius: 10px;
+    transition: all var(--transition-duration) ease-in-out;
+  }
+
+  &::before {
+    translate: 0 10px;
+  }
+
+  &::after {
+    translate: 0 -10px;
+  }
+
+  &[data-open='true'] {
+    &::before,
+    &::after {
+      scale: 50% 100%;
+      border-radius: 0 10px 10px 0;
+    }
+
+    &::before {
+      rotate: 45deg;
+      translate: -9px 6px;
+    }
+
+    &::after {
+      rotate: -45deg;
+      translate: -9px -6px;
+    }
+  }
+}

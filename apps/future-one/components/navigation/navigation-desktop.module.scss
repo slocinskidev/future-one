@@ -1,0 +1,25 @@
+@use '../../styles/breakpoints';
+
+.container {
+  display: none;
+
+  @include breakpoints.desktop {
+    display: block;
+  }
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 32px;
+  padding: 0;
+}
+
+.navigation-item {
+  color: var(--color-grey);
+
+  &:hover {
+    color: var(--color-black);
+  }
+}

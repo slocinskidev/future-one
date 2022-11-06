@@ -1,3 +1,20 @@
+@use '../../styles/breakpoints';
+
 .container {
-  background-color: red;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  align-items: center;
+
+  @include breakpoints.desktop {
+    padding: 64px 20px 16px;
+  }
+}
+
+.contact-btn {
+  height: 34px;
+  padding-inline: 48px;
+  z-index: 10;
 }

@@ -1,0 +1,43 @@
+@use '../../styles/breakpoints';
+
+.container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  z-index: 9;
+  padding: 80px 24px 32px;
+  translate: -100%;
+  transition: translate var(--transition-duration)
+    cubic-bezier(0.6, 0, 0.735, 0.045);
+  background-color: var(--color-white);
+
+  @include breakpoints.desktop {
+    display: none;
+  }
+
+  &[data-visible='true'] {
+    translate: 0;
+  }
+}
+
+.navigation-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  gap: 24px;
+  padding: 0;
+}
+
+.navigation-item {
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+}

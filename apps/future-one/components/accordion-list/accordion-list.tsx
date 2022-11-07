@@ -1,4 +1,5 @@
-import { Accordion } from '../accordion/accordion';
+import { Accordion } from '../index';
+
 import styles from './accordion-list.module.scss';
 
 const accordionList = {

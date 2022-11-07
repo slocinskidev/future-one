@@ -1,5 +1,4 @@
-import { Hero } from '../components';
-import { AccordionList } from '../components/accordion-list/accordion-list';
+import { Hero, AccordionList } from '../components';
 
 import styles from './index.module.scss';
 

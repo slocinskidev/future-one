@@ -1,1 +1,1 @@
-export * from './accordion-list.tsx';
+export * from './accordion-list';

@@ -6,3 +6,4 @@ export * from './navigation';
 export * from './next-image';
 export * from './rich-text';
 export * from './accordion';
+export * from './accordion-list';

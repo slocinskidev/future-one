@@ -21,8 +21,7 @@ export const Header = ({ navigation, contactButton }: HeaderProps) => {
   const [isOpen, toggleIsOpen] = useToggle();
 
   useEffect(() => {
-    document.body.style.overflowY =
-      document.body.style.overflowY === 'hidden' ? 'visible' : 'hidden';
+    document.body.style.overflowY = isOpen ? 'hidden' : 'visible';
   }, [isOpen]);
 
   return (

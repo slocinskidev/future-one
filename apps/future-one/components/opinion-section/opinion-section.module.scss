@@ -1,0 +1,65 @@
+@use '../../styles/breakpoints';
+
+.container {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 20px 0;
+  margin-bottom: 48px;
+  gap: 40px;
+
+  @include breakpoints.desktop {
+    flex-direction: row;
+    gap: 130px;
+  }
+}
+
+.about {
+  border-left: 10px solid var(--color-green);
+  padding-left: 20px;
+  min-height: 150px;
+  display: grid;
+  place-items: center;
+
+  @include breakpoints.desktop {
+    padding-left: 40px;
+    min-height: 250px;
+  }
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-green);
+  min-width: 284px;
+  line-height: 36px;
+
+  @include breakpoints.desktop {
+    max-width: 284px;
+  }
+}
+
+.opinion {
+  display: grid;
+  max-width: 495px;
+}
+
+.quote {
+  font-style: italic;
+  display: grid;
+  gap: 24px;
+}
+
+.quote-icon-start {
+  rotate: 180deg;
+}
+
+.quote-icon-end {
+  justify-self: end;
+}
+
+.author {
+  margin-top: -24px;
+}

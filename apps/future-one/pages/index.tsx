@@ -1,4 +1,4 @@
-import { Hero, AccordionList } from '../components';
+import { Hero, AccordionList, OpinionSection } from '../components';
 
 import styles from './index.module.scss';
 
@@ -7,6 +7,7 @@ export function IndexPage() {
     <div className={styles.container}>
       <Hero />
       <AccordionList />
+      <OpinionSection />
     </div>
   );
 }

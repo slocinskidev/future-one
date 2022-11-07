@@ -8,3 +8,5 @@ export * from './rich-text';
 export * from './accordion';
 export * from './accordion-list';
 export * from './opinion-section';
+export * from './feature-section';
+export * from './feature-card';

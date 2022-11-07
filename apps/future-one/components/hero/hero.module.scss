@@ -1,0 +1,66 @@
+@use '../../styles/breakpoints';
+
+.container {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding: 10px 20px;
+  display: grid;
+  gap: 30px;
+  grid-template-areas:
+    'logo'
+    'image'
+    'content';
+
+  @include breakpoints.desktop {
+    grid-template-areas:
+      'logo .'
+      'content image';
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.logo {
+  grid-area: logo;
+  font-size: 34px;
+  letter-spacing: -2%;
+  font-weight: 700;
+  color: var(--color-black);
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  grid-area: content;
+  padding-bottom: 40px;
+
+  @include breakpoints.desktop {
+    padding-bottom: 56px;
+  }
+
+  h1,
+  h2 {
+    font-size: 48px;
+    font-weight: 700;
+    max-width: 445px;
+
+    strong {
+      color: var(--color-green);
+    }
+  }
+
+  p {
+    max-width: 367px;
+  }
+}
+
+.image {
+  grid-area: image;
+  position: relative;
+  aspect-ratio: 758 / 506;
+  max-height: 506px;
+  max-width: 758px;
+  align-self: end;
+}

@@ -28,13 +28,14 @@ export const Hero = () => {
         <RichText {...{ html: text }} />
         <ButtonLink href={button.href}>{button.label}</ButtonLink>
       </div>
-      <div className={styles['image']}>
-        <NextImage
-          alt="Girl with laptop, smilling to us"
-          src="/images/hero.png"
-          fill
-        />
-      </div>
+
+      <NextImage
+        alt="Girl with laptop, smilling to us"
+        src="/images/hero.png"
+        fill
+        className={styles['image']}
+        priority
+      />
     </div>
   );
 };

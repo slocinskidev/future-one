@@ -7,9 +7,32 @@
   place-items: center;
   border-radius: 4px;
   box-shadow: 0px 2px 8px rgba(41, 55, 69, 0.15);
+  cursor: pointer;
   position: relative;
   color: var(--color-50-shades);
+  position: relative;
   transition: var(--transition-color);
+
+  &:hover {
+    background-color: var(--color-green);
+    color: var(--color-white);
+
+    .details-icon {
+      color: var(--color-white);
+    }
+
+    .details-link {
+      opacity: 1;
+      translate: 0;
+      color: var(--color-white);
+      border-color: var(--color-white);
+    }
+  }
+
+  &:focus-within {
+    outline: 2px solid var(--color-green);
+    outline-offset: 2px;
+  }
 }
 
 .details {
@@ -37,21 +60,6 @@
 }
 
 .card-link {
-  &:hover {
-    .container {
-      background-color: var(--color-green);
-      color: var(--color-white);
-    }
-
-    .details-icon {
-      color: var(--color-white);
-    }
-
-    .details-link {
-      opacity: 1;
-      translate: 0;
-      color: var(--color-white);
-      border-color: var(--color-white);
-    }
-  }
+  position: absolute;
+  inset: 0;
 }

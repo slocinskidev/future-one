@@ -91,6 +91,13 @@
 
 .icon {
   color: var(--color-green);
+  transition: var(--transition-color);
+  padding: 6px;
+  margin: -6px;
+
+  &:hover {
+    color: var(--color-white);
+  }
 }
 
 .legals {

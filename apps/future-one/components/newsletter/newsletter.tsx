@@ -33,7 +33,11 @@ export const Newsletter = () => {
             onChange={(e) => setEmail(e?.currentTarget?.value)}
             className={styles['email-input']}
           />
-          <Button type="submit" variant="outline">
+          <Button
+            type="submit"
+            variant="outline"
+            className={styles['form-button']}
+          >
             {buttonLabel}
           </Button>
         </form>

@@ -15,8 +15,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--color-black);
   padding: 20px 0;
   width: 100%;
+  text-align: left;
   transition: var(--transition-color);
 
   &:hover {

@@ -1,0 +1,25 @@
+.container {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.wrapper {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.form {
+  display: flex;
+}
+
+.email-input {
+  width: 100%;
+  max-width: 502px;
+}

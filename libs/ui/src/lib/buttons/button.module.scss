@@ -1,0 +1,36 @@
+.wrapper {
+  font-weight: 700;
+  letter-spacing: -2%;
+  font-size: 16px;
+  padding: 8px 56px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  cursor: pointer;
+  transition: var(--transition-color);
+
+  &[data-variant='contained'] {
+    border: 1px solid var(--color-transparent);
+    color: var(--color-white);
+    background-color: var(--color-green);
+
+    &:hover {
+      color: var(--color-green);
+      border-color: var(--color-green);
+      background-color: var(--color-transparent);
+    }
+  }
+
+  &[data-variant='outline'] {
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    background-color: var(--color-transparent);
+
+    &:hover {
+      color: var(--color-green);
+      background-color: var(--color-white);
+    }
+  }
+}

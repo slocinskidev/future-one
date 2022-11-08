@@ -66,7 +66,11 @@ export const Accordion = ({
           role: 'region',
           className: styles['body'],
           'data-expanded': isExpanded,
-          style: { '--accordion-body-height': height } as React.CSSProperties,
+          style: height
+            ? ({
+                '--accordion-body-height': height,
+              } as React.CSSProperties)
+            : undefined,
         }}
       >
         <div className={styles['body-wrapper']}>{body}</div>

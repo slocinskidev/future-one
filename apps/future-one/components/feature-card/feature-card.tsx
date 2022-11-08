@@ -24,16 +24,17 @@ export const FeatureCard = ({ icon, label }: FeatureCardProps) => {
   };
 
   return (
-    <UnstyledLink href="/" tabIndex={-1} className={styles['card-link']}>
-      <div className={styles['container']}>
-        {iconMap[icon]}
-        <div className={styles['details']}>
-          <PrimaryLink href="/" className={styles['details-link']}>
-            {label}
-          </PrimaryLink>
-          <ArrowRight className={styles['details-icon']} />
-        </div>
+    <div className={styles['container']}>
+      <UnstyledLink href="/" tabIndex={-1} className={styles['card-link']}>
+        <span className="sr-only">Redirect to something</span>
+      </UnstyledLink>
+      {iconMap[icon]}
+      <div className={styles['details']}>
+        <PrimaryLink href="/" className={styles['details-link']}>
+          {label}
+        </PrimaryLink>
+        <ArrowRight className={styles['details-icon']} />
       </div>
-    </UnstyledLink>
+    </div>
   );
 };

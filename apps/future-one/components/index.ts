@@ -10,3 +10,4 @@ export * from './accordion-list';
 export * from './opinion-section';
 export * from './feature-section';
 export * from './feature-card';
+export * from './newsletter';

@@ -3,6 +3,7 @@ import {
   AccordionList,
   OpinionSection,
   FeatureSection,
+  Newsletter,
 } from '../components';
 
 import styles from './index.module.scss';
@@ -14,6 +15,7 @@ export function IndexPage() {
       <AccordionList />
       <OpinionSection />
       <FeatureSection />
+      <Newsletter />
     </div>
   );
 }

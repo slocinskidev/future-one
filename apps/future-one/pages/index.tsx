@@ -4,6 +4,7 @@ import {
   OpinionSection,
   FeatureSection,
   Newsletter,
+  Seo,
 } from '../components';
 
 import styles from './index.module.scss';
@@ -11,6 +12,7 @@ import styles from './index.module.scss';
 export function IndexPage() {
   return (
     <div className={styles.container}>
+      <Seo templateTitle="Home Page" />
       <Hero />
       <AccordionList />
       <OpinionSection />
